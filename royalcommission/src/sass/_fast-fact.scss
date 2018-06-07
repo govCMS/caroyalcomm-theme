@@ -1,0 +1,40 @@
+// Fast fact module.
+.homepage-fastfact {
+  background-color: #f0f0f0;
+  padding: 51px 0 0;
+  text-align: center;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding: 0 15px;
+  }
+}
+.bean-fast-facts {
+  padding-bottom: 50px;
+}
+.fast-fact-number {
+  color: $rc-green;
+  font-family: "gotham_bold";
+  font-size: 54px;
+  line-height: 1.2em;
+}
+
+.fast-fact-item {
+  float: left;
+  text-align: center;
+  padding: 0 15px;
+  width: 25%;
+  .column-1 & {
+    width: 100%;
+  }
+  .column-2 & {
+    width: 50%;
+  }
+  .column-3 & {
+    width: 33.33%;
+  }
+}
+
+.fast-fact-title {
+  line-height: 1.2em;
+}

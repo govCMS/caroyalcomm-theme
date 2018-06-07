@@ -1,0 +1,96 @@
+// Timeline section 
+.homepage-timeline {
+  background: #efe9dd url('../img/bg-timeline.jpg') 50% bottom no-repeat;
+  padding: 43px 0 3px;
+  .slick-prev {
+    left: -8px;
+  }
+  .slick-next {
+    right: -8px;
+  }
+  .pane-title {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.bean-timelines {
+  padding: 0 15px 40px;
+}
+
+.paragraphs-items-field-timelines{
+  padding: 0 20px;
+}
+
+.timeline-item {
+  padding: 0 15px;
+}
+
+.timeline-item-yearlabel {
+  margin-top: 25px;
+  h3 {
+    color: $rc-green-timeline;
+    font-family: "gotham_bold";
+    font-size: 36px;
+    line-height: 1em;
+    height: 48px;
+    text-align: center;
+    margin: 0;
+    // padding: 25px 0 0;
+  }
+}
+.timeline-item-image {
+  margin-bottom: 12px;
+
+  a {
+    display: block;
+  }
+
+  img {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
+}
+.timeline-item-date {
+  color: #0f2e69;
+  font-family: "gotham_book";
+  font-size: 13px;
+  margin-bottom: -2px;
+  text-transform: uppercase;
+}
+.timeline-item-title {
+  h3 {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    a {
+      text-decoration: none; 
+      font-family: inherit;
+    }
+  }
+}
+.timeline-item-desc {
+  font-size: 15px;
+  line-height: 21px;
+  margin-bottom: 3px;
+  max-height: 130px;
+}
+.timeline-item-link a {
+  font-family: "gotham_bold";
+  font-size: 14px;
+}
+.timeline-item-title {
+  font-family: "gotham_bold";
+  font-size: 20px;
+}
+.timeline-item-wrapper {
+  display: block;
+  max-width: 200px;
+  margin: auto;
+}
+.bean-timelines .slick-arrow {
+  margin-top: 0;
+  top: 120px;
+}

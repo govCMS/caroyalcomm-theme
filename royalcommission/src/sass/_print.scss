@@ -1,0 +1,276 @@
+// Print styles
+
+
+@media print {
+  a[href]:after {
+    content:"";
+  }
+
+  img {
+    height: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    page-break-before: auto !important; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto !important; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: avoid !important; /* or 'auto' */
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .about-commissioner-item {
+    float: none !important;
+    width: 100% !important;
+  }
+  .image-video-item {
+    float: none !important;
+    width: 100% !important;
+    .image-video-content {
+      height: auto !important;
+    }
+  }
+  .media-release-item,
+  .media-release-content,
+  .media-release-image {
+    display: block !important;
+  }
+
+  /* Display Block Element */
+  .panel-accordion .panel-body {
+    border-color: transparent !important;
+    display: block !important;
+    padding: 20px 0 !important;
+  }
+
+  section[class*="homepage-"] {
+    padding-top: 0;
+  }
+
+  .region-content {
+    margin-bottom: 0 !important;
+  }
+
+  // Hide Elements
+  .file-list-wrapper .load-more,
+  #views-exposed-form-media-gallery-panel-pane-media-gallery .views-exposed-widget.views-submit-button,
+  .btn-download:before,
+  .pager,
+  .slider-nav,
+  .slick-clone,
+  .slick-cloned,
+  .slick-cloned.active,
+  div.slick-cloned.active,
+  .share-print,
+  .sidebar-region,
+  .sidebar-region.col-md-3,
+  .footer,
+  #modalRC {
+    display: none !important;
+  }
+
+  // Slick general
+  .slick-track {
+    transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    width: 100% !important;
+  }
+  .slick-slide {
+    float: none;
+    width: 100% !important;
+  }
+  .carousel-controls-wrapper {
+    display: none !important;
+    float: none !important;
+  }
+  .slick-slide.active {
+    display: block !important;
+  }
+  .slick-list {
+    height: auto !important;
+  }
+
+  // Carousel hero banner
+  .hero-banner-item .bg-item img {
+    display: block;
+    height: auto;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .small.hero-banner-item,
+  .hero-banner-item.small .bg-item,
+  .hero-banner-item .bg-item,
+  .hero-banner-item {
+    height: auto;
+  }
+  .small .hero-content-wrapper,
+  .hero-content-wrapper {
+    max-width: none !important;
+    position: static !important;
+    transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+  }
+  .small .hero-content-wrapper {
+    padding: 0;
+  }
+  .hero-content {
+    max-width: none;
+    padding: 20px 20px 0 0;
+  }
+  .hero-video-link .video-btn {
+    padding: 0;
+  }
+
+
+  // Fast fact
+  .homepage-fastfact {
+    // page-break-inside: avoid !important; /* or 'auto' */
+  }
+  .fast-fact-item {
+    margin-bottom: 20px;
+    margin-top: 0;
+    width: 50%;
+  }
+
+  // About the commissioner
+  .homepage-commissioner {
+    margin-top: 0;
+  }
+  .about-commissioner-item {
+    padding: 0;
+    .about-comm-desc {
+      max-height: none;
+    }
+  }
+  .about-commissioner-item-wrapper {
+    margin: 0;
+    max-width: none;
+  }
+  .about-comm-content {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  // Timeline section
+  .homepage-timeline {
+    padding-bottom: 30px;
+  }
+  .bean-timelines,
+  .timeline-item,
+  .paragraphs-items-field-timelines {
+    padding: 0;
+  }
+  .timeline-item-image img,
+  .timeline-item-wrapper {
+    margin: 0;
+    max-width: none;
+  }
+  .timeline-item-yearlabel{
+    text-align: left;
+  }
+
+  // Image Video Panel
+  .homepage-media {
+    display: block !important;
+    padding: 40px 0;
+  }
+  .image-video-item{
+    display: block !important;
+    float: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .image-video-content {
+    display: block !important;
+    // height: 100% !important;
+    padding: 10px 0 40px 0;
+    width: 100%;
+  }
+
+
+  .btn-download, .btn-download-ltr {
+    display: block !important;
+  }
+
+  .panel-accordion .panel-heading {
+    padding-right: 30px;
+  }
+
+
+  // Media page
+  .media-item {
+    float: none !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  // File list wrapper :
+  .file-list-wrapper .row {
+    display: block !important;
+    height: auto !important;
+    padding: 20px 0;
+  }
+
+  // Image Carousel
+  .rc-media-item-content,
+  .image-carousel-content {
+    display: block !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  // Private sessions
+  .view-private-sessions .views-row {
+    display: block !important;
+    height: auto !important;
+    padding: 20px 0;
+    .person-name {
+      position: static;
+    }
+  }
+
+
+  .page-top-wrapper {
+    padding: 15px 0;
+  }
+
+   /* from Dan: */;
+  html, body {
+    height: 99%;
+  }
+  #main-body{padding-top: 0 !important;}
+  #top, header {position: static;}
+
+
+  [class*="col-md"], [class*="col-sm"], [class*="col-xs"] {
+    float: none;
+  }
+
+  .top-navigation, .main-navigation{display: none;}
+  .file-list-wrapper, .file-list-wrapper h3{padding:0;}
+
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+    padding-left:0;padding-right:0;
+  }
+  .file-list-wrapper+.file-list-wrapper {
+    padding-top: 0;
+    border-top: 1px solid #c0c0c0;
+  }
+  .file-list-wrapper .row{
+    padding:10px 0;
+  }
+  .file-meta{display: none;}
+  a[href]:after{content:""}
+  .clearfix:after{display: none;}
+
+  .carousel-message-australia .slick-slide {
+    display: none;
+  }
+  .carousel-message-australia .slick-active, 
+  .carousel-message-australia .slick-current {
+    display: block;
+  }
+}

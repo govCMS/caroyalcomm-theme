@@ -1,0 +1,84 @@
+// About commissioner module 
+.homepage-commissioner {
+  padding: 48px 0 29px;
+  .pane-title {
+    margin-bottom: 27px; 
+    margin-top: 0;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+.bean-commissioners {
+  padding-bottom: 22px;
+}
+
+.about-commissioner-item {
+  display: block;
+  float: left;
+  margin-bottom: 28px;
+  overflow: hidden;
+  padding: 0 15px;
+  position: relative;
+  width: 33.33%;
+  &:hover {
+    .about-comm-content {
+      top: 0;
+    }
+  }
+}
+.about-comm-image img {
+  height: auto;
+  width: 100%;
+}
+.about-comm-content {
+  background: rgba(0,0,0,.8);
+  bottom: 0;
+  left: 15px;
+  overflow: hidden;
+  padding: 19px;
+  position: absolute;
+  top: 100%;
+  right: 15px;
+  transition: .3s all;
+
+  &.hover {
+    top: 0;
+  }
+}
+.about-comm-title h3 {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  max-height: 42px;
+}
+.about-comm-desc {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 3px;    
+  max-height: 60px;
+}
+.about-comm-link a {
+  color: #ffffff;
+  font-family: "gotham_bold";
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .about-comm-content {
+    background: #394e82;
+    height: 171px;
+    position: static;
+  }
+  .about-commissioner-item {
+    padding: 0 40px;
+    width: 100%;
+  }
+  .about-commissioner-item-wrapper{
+    display: block;
+    margin: auto;
+    max-width: 400px;    
+  }
+}

@@ -1,0 +1,98 @@
+p + .panel-accordion {
+  margin-top: 40px;
+}
+
+.panel-accordion { 
+  border: 0;
+  border-top: 1px solid #adadad;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  margin: 0;
+  &:last-child {
+    border-bottom: 1px solid #adadad;
+  }
+  .panel-heading {
+    margin-left: 0px;
+  }
+  .panel-heading,
+  .panel-body {
+    padding: 0;
+  }
+  .panel-heading {
+    display: block;
+    @include body-font();
+    padding: 13px 50px 12px 0;
+    position: relative;
+    text-decoration: none;
+    &:after {
+      background: url("../img/icon-arrow-dark.png") 0 0 no-repeat;
+      content: "";
+      height: 10px;
+      margin-top: -5px;
+      position: absolute;
+      right: 20px;
+      transition: .2s all;
+      top: 50%;
+      width: 17px;
+    }
+
+    &:hover .panel-heading-title {
+      text-decoration: underline;      
+    }
+
+    &.open:after {
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+  }
+  .panel-body {
+    display: none;
+    padding: 0 0 35px;
+  }
+  .panel-heading-title {
+    display: block;
+    @include heading-font();
+    font-size: 20px;
+  }
+  .panel-heading-subtitle {
+    display: block;
+  }
+  &.exhibits {
+    .item-wrapper,
+    .panel-heading {
+      padding: 13px 0 10px;
+      &:hover .panel-heading-title {
+        text-decoration: none;      
+      }
+    }
+    .panel-heading:after {
+      display: none;
+    }
+    .col-md-3 {
+      text-align: right;
+    }
+  }
+}
+
+.paragraphs-items-field-accordion-content {
+  margin-bottom: 40px;
+}
+
+
+@media (max-width: 991px) {
+  .panel-accordion.exhibits .col-md-3 {
+    text-align: left;
+  }
+  .panel-accordion .panel-heading {
+    padding-right: 30px;
+  }
+  .panel-accordion .panel-heading:after {
+    right: 0;
+  }
+  .panel-accordion.exhibits .item-wrapper {
+    padding-top: 0;
+    padding-bottom: 18px;
+  }
+}

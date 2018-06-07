@@ -1,0 +1,157 @@
+.px-video-container {
+  display: none;
+	height: auto;
+	@include opacity(0);
+	position: absolute;
+  -webkit-transition: 0.4s all;
+  top: 0;
+	transition: 0.4s all;
+	width: 100% !important;
+	z-index: 5;
+
+	.video-play & {
+    display: block;
+		@include opacity(1);
+		position: relative;
+	}
+
+	.detail-gallery-video {
+		position: inherit;
+	}
+}
+
+.px-video-controls {
+	button {
+		background-color: #ffffff;
+		background-image: url(../img/px-video-sprite.png);
+
+		&:focus {
+			border: none;
+			outline: #4d90fe solid 2px;
+			outline-offset: 0;
+		}
+
+		&.px-video-restart {
+			&:focus,
+			&:hover {
+				background-position: -6px -333px;
+			}
+		}
+
+		&.px-video-rewind {
+			&:focus,
+			&:hover {
+				background-position: -6px -189px;
+			}			
+		}
+
+		&.px-video-play {
+			&:focus,
+			&:hover {
+				background-position: -6px -45px;
+			}			
+		}
+
+		&.px-video-pause {
+			&:focus,
+			&:hover {
+				background-position: -6px -117px;
+			}			
+		}
+		
+		&.px-video-forward {
+			&:focus,
+			&:hover {
+				background-position: -6px -261px;
+			}			
+		}
+  }
+  
+  &.js-fullscreen-controls {
+    background-color: $rc-softgrey;
+    padding: 10px;
+
+    .px-timetip {
+      bottom: 37px;
+    }
+  }
+}
+
+.px-video-fullscreen-btn-container {
+	margin-right: 7px;
+
+	label {
+		background-color: #ffffff;
+		background-image: url(../img/px-video-sprite.png);
+	}
+
+	input[type=file],
+	input[type=checkbox],
+	input[type=radio] {
+		&:focus {
+			border: none;
+			outline: #4d90fe solid 2px;
+			outline-offset: 0;
+		}
+	}
+}
+
+.px-video-controls {
+	input[type="range"] {
+		background-color: #ffffff;
+
+		&:focus {
+			border: none;
+			outline: #4d90fe solid 2px;
+			outline-offset: 0;
+		}
+	}
+}
+
+.px-video-mute-btn-container {
+	margin-right: 7px;
+
+	label {
+		background-color: #ffffff;
+		background-image: url(../img/px-video-sprite.png);
+		margin-left: 0 !important;
+	}
+
+	input[type=file],
+	input[type=checkbox],
+	input[type=radio] {
+		&:focus {
+			border: none;
+			outline: #4d90fe solid 2px;
+			outline-offset: 0;
+		}
+	}
+}
+
+.px-video-progress {
+	&[value] {
+		&:-webkit-progress-bar {
+			background-color: #ffffff;
+		}
+		&::-webkit-progress-bar {
+			background-color: #ffffff;
+		}
+	}
+	&:not([value]) {
+		background-color: #ffffff;
+	}
+}
+
+.px-timetip {
+  /* display: none !important; */
+  bottom: 27px;
+}
+
+.detail-gallery-img {
+	&.video-play {
+		.img-responsive,
+		.video-btn {
+			display: none;
+		}
+	}
+}

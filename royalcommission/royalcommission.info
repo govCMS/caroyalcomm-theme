@@ -1,0 +1,47 @@
+name = Royal Commission
+description = Royal Commission Drupal theme bootstrap
+core = 7.x
+
+; based off static HTML mockup version:
+; https://fribibb.github.io/new-govcms/
+
+settings[breadcrumb_display] = 1
+settings[scrolltop_display] = 1
+settings[responsive_respond] = 1
+settings[bootstrap_css_cdn] = 3.3.7  ; FYI this isn't used - edit 'templates/html.tpl.php'
+; number of columns in each megamenu drop down
+settings[sub_menu_columns] = 4;
+; number of items in homepage carousel
+settings[num_carousel_items] = 8;
+
+plugins[panels][layouts] = panels-layouts
+
+scripts[] = js/bootstrap.min.js
+scripts[] = js/bootstrap-select.js
+scripts[] = js/slick.min.js
+scripts[] = js/jquery.matchHeight.js
+scripts[] = js/jquery.dotdotdot.min.js
+scripts[] = js/jquery.animateNumber.js
+scripts[] = js/jquery.browser.min.js
+scripts[] = js/imagesloaded.pkgd.min.js
+scripts[] = js/px-strings.js
+scripts[] = js/px-video.js
+scripts[] = js/script.js
+
+stylesheets[all][] = css/px-video.css
+stylesheets[all][] = css/styles.css
+
+regions[header_menu] = Header Menu
+regions[header] = Header
+regions[search] = Search Block
+regions[top] = Top
+regions[top_left] = Top left
+regions[top_right] = Top right
+regions[content_top] = Content top
+regions[content] = Content
+regions[sidebar_first] = Sidebar
+regions[footer] = Footer
+regions[footer_menu] = Footer Menu
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+

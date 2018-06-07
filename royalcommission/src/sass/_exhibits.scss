@@ -1,0 +1,188 @@
+.paragraphs-item-exhibits {
+  padding: 0 15px; 
+  [class*="col-"] & {
+    padding: 0;
+  }
+  .document-item-link {
+    min-width: 155px;
+    width: 155px;
+  }
+}
+.exhibits-container  {
+  border: 1px solid #cbcbcb;
+  width: 100%;
+  margin-bottom: 1px;
+  
+  .accordion-content > td { 
+    display: none;
+    padding: 0px 15px 15px;
+    position: relative;
+    &:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #f3f3f3;
+      content: "";
+      display: block;
+      height: 15px;
+      position: absolute;
+      right: 60px;
+      top: -14px;
+      width: 30px;
+    }
+  }
+}
+.exhibits-header {
+  .header-item {
+    background: $rc-blue;
+    color: #ffffff;
+    padding: 15px 10px;
+    text-align: center;
+    @media (min-width: 992px) {
+      &:first-child {
+        width: 146px;
+      }
+      &:nth-child(2) {
+        width: 120px;
+      }
+      &:nth-child(3) {
+        width: 170px;
+      }
+      &:nth-child(5) {
+        width: 182px;
+      }
+    }
+  }
+}
+.exhibits-items .exhibits-element {
+  padding: 10px 1px;
+  text-align: center;
+
+  @media screen and (min-width: 900px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.exhibits-container {
+  .document-container {
+    background: #f3f3f3;
+    border-top: 1px solid #ffffff;
+    display: table;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      word-break: break-word;
+    }
+
+    .document-container-left {
+      display: table-cell;
+      padding: 10px 15px 12px;
+      vertical-align: top;
+      width: 100%;
+    }
+    .document-container-right {
+      display: table-cell;
+      min-width: 143px;
+      padding: 10px 15px 10px 0;
+      width: 143px;
+      vertical-align: top;
+      
+      .btn-download, .btn-download-ltr {
+        padding: 4px 50px 5px 0;
+      }
+    }
+  }
+  .document-title-container {
+    display: block;
+    width: 100%;
+    .document-title {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+  }
+  .document-info-container {
+    display: table;
+    font-size: 12px;
+    font-family: "gotham_medium";
+    b {
+      font-family: "gotham_medium";
+      font-weight: normal;
+    }
+    .document-id-container,
+    .document-date-container {
+      display: table-cell;
+      padding-right: 15px;
+      width: 280px;
+
+      @media screen and (max-width: 767px) {
+        padding-right: 5px;
+      }
+    }
+    
+    @media screen and (min-width: 601px) and (max-width: 699px) {
+      width: 100%;
+      
+      .document-id-container,
+      .document-date-container {
+        display: block;
+      }
+    }
+  }
+  .document-download-container {
+    display: block;
+    float: right;
+    width: 30%;
+    .download {
+      float: right; 
+    }
+  }
+
+  .exhibits-items {
+    border-bottom: 1px solid #cbcbcb;
+  }
+  .exhibits-items.open-links {
+    border-bottom: none;
+  }
+  .exhibits-items.open-links + .accordion-content {
+    border-bottom: 1px solid #cbcbcb;
+  }
+}
+
+.content-toggle {
+  .hide-text {
+    display: none;
+  }
+}
+
+.open-links .content-toggle  {
+  .show-text {
+    display: none;
+  }
+  .hide-text {
+    display: inline;
+  }
+}
+
+@media (max-width: 767px) {
+  .exhibits-items .exhibits-element,
+  .exhibits-header .header-item {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .exhibits-container .document-title-container .document-title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .exhibits-container .document-info-container .document-date-container, 
+  .exhibits-container .document-info-container .document-id-container {
+    display: block;
+    width: 100%;
+  }
+}

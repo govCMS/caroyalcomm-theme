@@ -1,0 +1,167 @@
+.carousel-component-wrapper {
+  padding-bottom: 40px;
+  padding-left : 15px;
+  padding-right: 15px;
+  .slider-for {
+    padding: 0 25px;
+    .slick-list {
+      background-color: #f0f0f0;
+    }
+  }
+  [class*="col-"] & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .slider-nav .slick-arrow {
+    // using important to override inline style by slick
+    display: none !important;
+  }
+}
+.rc-media-item-img {
+  position: relative;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.rc-media-item-content {
+  background-color: #f0f0f0;
+  display: table;
+  padding: 15px 24px;
+}
+.rc-media-item-caption {
+  display: table-cell;
+  line-height: 21px;
+  padding-right: 10px;
+  vertical-align: top;
+  width: 100%;
+  h4 {
+    color: $copy-color;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  p {
+    margin-bottom: 3px;
+  }
+  &:not(.has-more) .text-more-less {
+    /* Using important to override inline style that given by JS */
+    height: auto !important;
+  }
+}
+.rc-media-item-share {
+  display: table-cell;
+  min-width: 100px;
+  width: 100px;
+}
+.rc-media-count {
+  font-family: "gotham_medium";
+  padding-bottom: 10px;
+}
+.slider-for {
+  margin-bottom: 22px;
+  .share-print-share ul {
+    bottom: 100%;
+    right: 0;
+    top: auto;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .ie & .slick-loading {
+    width: auto;
+  }
+  .slick-prev {
+    left: -4px;
+  }
+  .slick-next {
+    right: -4px;
+  } 
+}
+
+.slider-nav {
+  padding: 0 19px;
+  .item {
+    padding: 0 6px;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .ie & .slick-loading {
+    width: auto;
+  }
+}
+.carousel-thumb-content {
+  font-family: "gotham_medium";
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 8px;
+  p {
+    max-height: 75px;
+  }
+}
+.thumb-img {
+  position: relative;
+}
+.text-more-less {
+  margin-bottom: 10px;
+  overflow: hidden; 
+  transition: 0.4s all;
+}
+.text-more-less p {
+  margin: 0;
+  & + p {
+    margin-top: 10px;
+  }
+}
+
+.read-more-btn {
+  display: none;
+  padding-right: 20px;
+  position: relative;
+  &:after {
+    background: url("../img/icon-arrow-right-blue.png");
+    content: "";
+    height: 10px;
+    position: absolute;
+    right: 3px;
+    transition: .3s all;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    top: 6px;
+    width: 6px;
+  }
+  .open &:after {
+    transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+  }
+}
+.has-more .read-more-btn {
+  display: inline-block;
+}
+.has-more .less,
+.has-more.open .more {
+  display: none;
+}
+.open .less {
+  display: inline-block;
+}
+.item-book-thumbnail {
+  position: relative;
+}
+.item-book-thumbnail a {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}

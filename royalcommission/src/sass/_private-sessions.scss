@@ -1,0 +1,296 @@
+#views-exposed-form-private-sessions-panel-pane-private-session {
+	background: #f3f3f3;
+	margin-bottom: 14px;
+	padding: 16px 17px 6px;
+	#edit-category-wrapper {
+		width: 154px;
+	}
+  #edit-field-private-session-gender-value-wrapper {
+    width: 154px;
+  }
+  #edit-field-state-value-wrapper {
+    width: 125px;
+  }
+  #edit-field-private-session-year-value-wrapper {
+    margin-right: 7px;
+    width: 126px;
+  }
+	#edit-topic-wrapper {
+		width: 145px;
+	}
+	#edit-keyword-wrapper {
+		width: 150px;
+    padding-right: 0px;
+	}
+  #checkboxes-wrapper {
+    padding-bottom: 0;
+    padding-top: 17px;
+    padding-right: 26px;
+    .views-widget {
+      border-right: 1px dotted $copy-color;
+      padding-right: 20px;
+    }
+  }
+  .views-exposed-widget {
+    padding-bottom: 10px;
+    & > .views-exposed-widget {
+      padding-bottom: 0;
+    }
+  }
+  #edit-field-government-value-wrapper {
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 0;
+    .form-type-radio {
+      padding-right: 10px;
+    }
+  }
+  #edit-field-government-value {
+    & > .form-item {
+      display: block;
+      float: left;
+      padding-right: 0;
+      &:first-child {
+        padding-right: 17px;
+      }
+    }
+  }
+  .views-submit-button input {
+    display: none;
+  }
+  .views-exposed-form {
+    position: relative;
+    &:before {
+      background: #b7b7b7;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 59px;
+    }
+  }
+
+  #edit-field-government-value-wrapper .form-item-field-government-value .form-radios {
+    padding-right: 25px;
+    border-right: 1px dotted #b7b7b7;
+    margin: 0 10px 5px 0;
+    
+    @include clearfix;
+  }
+
+  #edit-field-atsi-value-wrapper {
+    padding-bottom: 0;
+    padding-top: 19px;
+    float: right;
+  }
+}
+
+.ticked-tags-item {
+  padding: 10px 15px;
+  background-color: #f3f3f3;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  display:inline-block;
+}
+
+.tags-bold {
+  font-weight:bold;
+}
+
+.view-private-sessions {
+	margin: 0 -15px;
+	.views-row {
+		display: block;
+		float: left;
+		margin-bottom: 48px;
+		padding: 0 15px;
+		width: 33.33%;
+		img {
+			display: block;
+      height: auto;
+			width: 100%;
+		}
+	}
+	.pager {
+	   padding-top: 15px;
+	}
+  .view-header {
+    padding: 0 15px 26px;
+  }
+}
+.private-session-image {
+  background-color: #000000;
+  margin-bottom: 9px;
+  position: relative;
+
+  a {
+    display: block;
+
+    img {
+      @include opacity(0.9);
+    }
+  }
+}
+.private-session-link {
+  line-height: 22px;
+  a {
+    font-family: "gotham_bold";
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.field-name-field-private-session-tags {
+  margin-bottom: 34px;
+	.field-label {
+		color: $heading-color;
+		float: none;
+		font-family: "gotham_bold";
+		margin-bottom: 3px;
+	}
+
+	.field-item {
+		background: #f3f3f3;
+		font-family: "gotham_medium";
+    font-size: 15px;
+    float: left;
+    margin: 0 4px 0 0;
+    padding: 2px 9px 4px;
+	}
+}
+
+.person-name {
+  color: #ffffff;
+  font-family: "gotham_medium";
+  font-size: 30px;
+  line-height: 1.1em;
+  left: 0;
+  max-height: 100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 100%;
+}
+
+// Empty result
+div[class*="col-"] .view-private-sessions .view-empty {
+  padding: 0 15px;
+}
+
+.form-item-field-government-value,
+.form-item-field-atsi-value {
+  .bootstrap-select {
+    display:none !important;
+  }
+
+  .field-suffix {
+    .form-type-radio {
+      float: left;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #views-exposed-form-private-sessions-panel-pane-private-session #edit-field-government-value-wrapper,
+  #views-exposed-form-private-sessions-panel-pane-private-session #edit-field-atsi-value-wrapper {
+    float: none;
+  }
+  #views-exposed-form-private-sessions-panel-pane-private-session #edit-field-atsi-value-wrapper {
+    padding-top: 4px;
+  }
+  #views-exposed-form-private-sessions-panel-pane-private-session #edit-field-government-value-wrapper .form-item-field-government-value .form-radios {
+    border-right: 0;
+    padding-right: 0;
+  }
+	#views-exposed-form-private-sessions-panel-pane-private-session {
+    padding-bottom: 15px;
+		#edit-category-wrapper,
+		#edit-topic-wrapper,
+    #checkboxes-wrapper,
+		#edit-keyword-wrapper,
+    #edit-field-private-session-gender-value-wrapper,
+    #edit-field-state-value-wrapper,
+    #edit-field-private-session-year-value-wrapper {
+			width: 100%;
+		}
+
+    #edit-field-private-session-year-value-wrapper {
+      margin-right: 0;
+    }
+
+    .views-exposed-form:before {
+      display: none;
+    }
+
+    .views-reset-button {
+      bottom: 0;
+      position: absolute;
+    }
+
+    #checkboxes-wrapper {
+      padding-bottom: 10px;
+      padding-top: 0;
+      padding-right: 0;
+      .views-widget {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+    #edit-field-government-value-wrapper {
+      padding-top: 0;
+    }
+    .views-exposed-form {
+      padding-bottom: 40px;
+    }
+	}
+	.view-private-sessions {
+		.views-row {
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.view-private-sessions {
+		.views-row {
+			width: 100%;
+		}
+	}
+
+  #edit-field-decade-value-wrapper {
+    width:100%;
+  }
+
+  .form-item-field-government-value {
+    .form-type-radio {
+      width:100%;
+    }
+  }
+}
+
+.paragraphs-items-field-books .slider{
+  visibility: hidden;
+}
+.paragraphs-items-field-books .carousel-component-wrapper:before{
+  content:"Loading ...";
+}
+.paragraphs-items-field-books .carousel-component-wrapper.noloading:before{
+  content:"";
+}
+
+.node-private-session {
+  .field-item {
+      h4 {
+          margin-top: 40px
+      }
+  }
+  .field-type-text-with-summary {
+      padding-bottom: 0px
+  }
+}

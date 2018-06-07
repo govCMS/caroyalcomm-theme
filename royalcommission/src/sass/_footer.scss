@@ -1,0 +1,109 @@
+.footer {
+  background: $rc-blue;
+}
+
+.footer-top {
+  padding: 35px 0 28px;
+
+  .content > .menu > li {
+    color: #ffffff;
+    font-family: "gotham_bold";
+    font-size: 18px;
+    float: left;
+    line-height: 1.4;
+    padding: 0 15px;
+    width: 25%;
+    & > a {
+      color: #ffffff;
+      cursor: default;
+      font-family: "gotham_bold";
+      font-size: 18px;
+    }
+  } 
+
+  .region-footer {
+    margin: 0 -15px; 
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-image: none;
+      list-style-type: none;
+      margin: 0; 
+      padding: 0;
+    }
+    a {
+      color: #d6dae3;
+      font-family: "gotham_book";
+      font-size: 15px;
+      text-decoration: none;
+      &:hover, 
+      &:focus {
+        text-decoration: underline;
+      } 
+    }
+  }
+
+  .menu .dropdown-footer {
+    display: block;
+    position: relative;
+    &:hover, 
+    &:focus {
+      text-decoration: none;
+    }
+    &:after {
+      background: url("../img/icon-arrow-down-white.png") no-repeat;
+      content: "";
+      display: none;
+      height: 10px;
+      position: absolute;
+      right: -15px;
+      top: 10px;
+      transition: .2s all;
+      width: 14px;
+    }
+    &.open:after {
+      transform: rotate(180deg);
+      ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid #67779f;
+  overflow: hidden;
+  .menu {
+    display: inline-block;
+    margin: 0;
+    padding: 22px 0 5px;
+    li {
+      border-right: 1px solid #ffffff;
+      float: left;
+      line-height: 0;
+      list-style-image: none;
+      list-style-type: none;
+      margin: 0 12px 10px 0;
+      padding: 0 12px 0 0;
+      a {
+        color: #d6dae3;
+        font-family: "gotham_book";
+        font-size: 13px;
+        line-height: 1;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}

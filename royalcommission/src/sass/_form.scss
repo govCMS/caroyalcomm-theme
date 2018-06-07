@@ -1,0 +1,386 @@
+// Style for form. 
+
+.form-item .optional {
+  display: none;
+}
+
+.form-item  {
+  margin-bottom: 20px;
+  margin-top: 13px;
+  label {
+    color: inherit;
+    font-family: "gotham_bold";
+    font-size: 15px;
+    font-weight: normal;
+    margin: 15px 0 3px;
+  } 
+  textarea,
+  input {
+    border: 1px solid $rc-dark-grey;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-appearance: none;
+    color: inherit;
+    font-family: "gotham_book";
+    font-size: 15px;
+    font-weight: normal;
+    padding: 6px 12px 9px;
+    width: 100%;
+  }
+  input {
+    height: 43px;
+  }
+}
+
+// Select. 
+.bootstrap-select>.dropdown-toggle.bs-placeholder, 
+.bootstrap-select>.dropdown-toggle.bs-placeholder:active, 
+.bootstrap-select>.dropdown-toggle.bs-placeholder:focus, 
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover  {
+  color: inherit;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100%;
+}
+.bootstrap-select {
+  width: 302px;
+  .btn {
+    background: #ffffff;
+    border: 1px solid $rc-dark-grey;
+    color: inherit;
+    font-family: "gotham_book";
+    font-size: 15px;
+    margin-top: 0;
+    padding: 10px 27px 10px 16px;
+  }
+  &.btn-group.open .dropdown-toggle,
+  &>.dropdown-toggle.btn-default.focus, 
+  &>.dropdown-toggle.btn-default:focus, 
+  &>.dropdown-toggle.btn-default:hover
+  &.open>.dropdown-toggle.btn-default.focus, 
+  &.open>.dropdown-toggle.btn-default:focus, 
+  &.open>.dropdown-toggle.btn-default:hover {
+    background: #ffffff;
+    border-color: $rc-dark-grey;
+    box-shadow: none;
+  }
+  &.btn-group .dropdown-menu {
+    border: 1px solid $rc-dark-grey;
+    border-top: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .dropdown-menu>li {
+    border-top: 1px solid $rc-dark-grey;
+    margin-bottom: 0;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  .dropdown-menu>li>a {
+    color: inherit;
+    font-family: "gotham_book";
+    font-size: 15px;
+    font-weight: normal;
+    padding: 9px 13px;
+    white-space: normal;
+  }
+  .dropdown-menu>li>a:focus, 
+  .dropdown-menu>li>a:hover {
+    background: $rc-grey;
+    color: #ffffff;
+  }
+  &.btn-group .dropdown-toggle .caret {
+    background: url("../img/icon-arrow-down.png") no-repeat;
+    border: 0;
+    height: 12px;
+    right: 10px;
+    top: 20px;
+    width: 15px;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  &.open .dropdown-menu {
+    display: block;
+  }
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  text-overflow: ellipsis;
+}
+
+
+// Checkboxes and radio button 
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin: 0;
+}
+
+// Checkboxes :
+.form-type-checkbox {
+  & > label {
+    cursor:pointer;
+    display: inline-block;
+    font-family: "gotham_book";
+    margin: 0 0 6px;
+    vertical-align: middle;
+    padding: 3px 0 5px 36px;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    &::before {
+      border: 1px solid #333;
+      content: "";
+      color: #333;
+      display: inline-block;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      background-color: #fff;
+      position: absolute;
+      top: 3px;
+      transition: all .15s;
+    }
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      margin-top: 0;
+      content: "";
+      line-height: 1;
+      right: auto;
+      height: 28px;
+      width: 28px;
+    }
+  }
+}
+input[type="checkbox"] {
+  &:checked + label::after {
+    background: url("../img/icon-check.png") 6px 7px no-repeat;
+  }
+
+  &:disabled + label:after {
+    background: url("../img/icon-check.png") 6px -12px no-repeat;
+    background-color: #e1e1e1;
+  }
+}
+input[type="checkbox"]:focus {
+  & + label::after,
+  & + label::before {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+}
+// Radio
+.form-type-radio {
+  & > label {
+    cursor:pointer;
+    display: inline-block;
+    font-family: "gotham_book";
+    margin: 0 0 6px;
+    vertical-align: middle;
+    padding: 1px 0 7px 32px;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    &::before {
+      content: "";
+      border: 1px solid;
+      display: inline-block;
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      left: 0;
+      top: 4px;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #333;
+      transition: all 0.15s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      height: 11px;
+      width: 11px;
+    }
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    &:checked + label::after {
+      background: $rc-blue;
+      @include border-radius(100%);
+      border: 1px solid #ffffff;
+    }
+
+    &:focus + label::before {
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    &:disabled + label {
+      &::before {
+        background-color: #e1e1e1;
+        color: #e1e1e1;
+        cursor: not-allowed;
+      }
+      &:after {
+        background: #9d9d9d;
+      }
+    }
+
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  @include opacity(0);
+  z-index: 1;
+  cursor: pointer;
+  width: auto;
+  &:disabled + label {
+    &::before, &::after {
+      color: #e1e1e1;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+// File input 
+.form-item input[type="file"] {
+  background: #fff;
+  border: 0;
+  height: 32px;
+  padding: 0 0 5px;
+}
+.form-item input[name="submitted_file_input_remove_button"],
+.form-item input[type="file"] + input[type="submit"] {
+  background: $rc-blue;
+  border: 0;
+  color: #fff;
+  max-width: 100px;
+  padding: 6px;
+  transition: .3s all;
+  &:focus,
+  &:hover {
+    background: $rc-blue-hover;
+  }
+}
+
+span.highlight {
+  background-color: yellow;
+}
+
+// Label for radio item
+.form-item.form-type-radio input + label {
+  display: block;
+}
+
+
+
+.narratives-filter-form {  
+  .bootstrap-select .dropdown-toggle:focus {
+    transition: none !important;
+    outline: #4d90fe solid 2px !important;
+    outline-offset: 0;
+  }
+  
+  .form-type-radio {
+    input.form-radio {
+      display: none;
+    }
+    
+    label {
+      &:before,
+      &:after {
+        display: none;
+        content: "";
+      }
+    }
+  }
+  
+  .form-type-checkbox {
+    input.form-checkbox {
+      display: none;
+    }
+    
+    label {
+      &:before,
+      &:after {
+        display: none;
+        content: "";
+      }
+    }
+  }
+  
+  .dummy {
+    display: block;
+    position: absolute;
+    left: 0; 
+    top: 4px;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    background: #fff;
+    border: 1px solid #333;
+    
+    //opacity: 0.1;
+    
+    width: 23px;
+    height: 23px;
+    
+    &.radio {
+      border-radius: 100%;  
+      
+      &.checked {
+        &:before {
+          display: block;
+          background: #3f5a8d;
+          width: 9px; 
+          height: 9px;
+          content: " ";
+          border-radius: 100%;
+          margin: 6px;
+        }
+      }
+    }
+    
+    &.checkbox {
+      top: 3px;
+      width: 28px;
+      height: 28px;
+      
+      &.checked {
+        background: #fff url(../img/icon-check.png) 6px 7px no-repeat;
+      }
+    }
+  }
+}
+
+.no-touch {
+  .narratives-filter-form {
+    .btn {
+      transition: none !important;
+
+      &:focus {
+        outline: #4d90fe solid 2px;
+      }
+    }
+  }
+}

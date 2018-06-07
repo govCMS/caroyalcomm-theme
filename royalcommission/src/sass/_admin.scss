@@ -1,0 +1,77 @@
+body.logged-in {
+  div#modalContent {
+    left: 10% !important;
+    top: 10% !important;
+  }
+}
+
+#user-login {
+  padding: 0 15px;
+}
+
+.layout-link { 
+  height: auto;
+  text-align: center;
+  img {
+    display: block;
+  }
+  &.current-layout {
+    background-color: #efefef;
+  }
+}
+.modal-content,
+div.ctools-modal-content {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+div.ctools-modal-content {
+  .modal-content {
+    border: 0;
+   width: 100% !important;
+  }
+  .close {
+    color: $copy-color;
+    font-size: 15px;
+    opacity: 1;
+    text-decoration: none;
+    margin-top: 2px;
+    font-family: "gotham_book";
+    font-weight: 300;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#linkit-modal {
+  height: auto !important;
+  form input {
+    float: none;
+  }
+  .form-item .description {
+    font-size: 0.6em;
+  }
+  .linkit-search-element,
+  .linkit-path-element {
+    width: 100%;
+  }
+  .form-wrapper {
+    font-size: 17px;
+  }
+  .form-submit {
+    margin-right: 10px;
+  }
+}
+
+
+.ctools-modal-content .form-type-checkbox {
+  min-height: 49px;
+}
+
+div.ctools-modal-content .form-item-override-title-heading .dependent-options {
+  padding-left: 0;
+}
+.form-item-override-title-heading .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100px;
+}

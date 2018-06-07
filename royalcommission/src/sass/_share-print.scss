@@ -1,0 +1,94 @@
+
+.share-print {
+  padding: 0;
+  text-align: right;
+}
+.share-print-share,
+.share-print-print {
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+}
+
+.share-print-share + .share-print-print {
+  border-left: 1px solid #333;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.print-btn,
+.share-btn {
+  background: url("../img/icon-shares.png") right 1px no-repeat;
+  color: #333;
+  display: inline-block;
+  font-family: "gotham_medium";
+  border: 0;
+  padding: 0 38px 3px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:focus,
+  &:hover {
+    color: $copy-color;
+    text-decoration: none;
+  }
+}
+
+.share-print-share:hover > ul {
+  display: block;
+}
+
+.print-btn {
+  background-position: right -37px;
+}
+
+.share-print-share ul {
+  background: #ffffff;
+  border: 1px solid #cbcbcb;
+  display: none;
+  margin: 0;
+  padding: 8px 15px;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  z-index: 2;
+  li:before {
+    display: none;
+  }
+  li {
+    line-height: 20px;
+    margin-bottom: 5px;
+    a {
+      background: url("../img/facebook_share.png") 0 2px no-repeat;
+      background-size: 23px;
+      display: block;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 5px 2px 5px 30px;
+      &.share-li {
+        background-image: url("../img/linkedin.png");
+        display: none;
+      }
+      &.share-tw {
+        background-image: url("../img/twitter.png");
+      }
+      &.share-em {
+        background-image: url("../img/email.png");
+      }
+    }
+  }
+  &.open {
+    display: block;
+  }
+}
+
+.hide-print {
+  .share-print-print {
+    display: none;
+  }
+}
+
+.video-share-wrapper {
+  .share-print {
+    padding: 0;
+  }
+}

@@ -1,0 +1,103 @@
+// Create an animated background gradient on an angle
+@mixin background-gradient($colour1,$colour2,$colour3) {
+  background-color: $colour1;
+  background: linear-gradient(
+    11deg, $colour1, $colour2, $colour3 );
+  background-size: 400% 400%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// Mixin for transparency 
+@mixin opacity($trans) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+// Mixin for transform css 
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+// Globally used body font declaration
+@mixin body-font() {
+  color: #333333;
+  font-family: "gotham_book";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+@mixin heading-font() {
+  color: $heading-color;
+  font-family: "gotham_bold";
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+@mixin blurBG() {
+  $blurAmount: 10px;
+  -webkit-backdrop-filter: blur($blurAmount);
+  backdrop-filter: blur($blurAmount);
+}
+
+
+// Colour text (or font icons!) with a gradient
+// WebKit Only 😕
+// + watch out for MS Edge's stupidity thinking its webkit, but only partly.. 😒
+@mixin color-gradient($colour1, $colour2) {
+  background: -webkit-linear-gradient( 25deg, $colour1, $colour2 ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: $colour1;
+  padding: 5px; // this is for the icons cropping too much
+}
+// USAGE: @include color-gradient($colour1, $colour2);
+
+
+// Clear fix
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+// Center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
