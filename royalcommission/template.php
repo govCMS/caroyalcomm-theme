@@ -57,6 +57,7 @@ function royalcommission_process_html(&$vars) {
 function royalcommission_preprocess_html(&$vars) {
   $path = drupal_get_path_alias();
   $aliases = explode('/', $path);
+  drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
 
   foreach ($aliases as $alias) {
     if ($alias == 'search') {
@@ -353,11 +354,11 @@ function royalcommission_js_alter(&$javascript) {
   // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
     //$javascript['misc/jquery.js']['data'] = '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
-    $javascript['misc/jquery.js']['data'] = $base_url.'/sites/all/themes/royalcommission/js/jquery.min.js';
+    $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'royalcommission') . '/js/jquery.min.js';
     $javascript['misc/jquery.js']['version'] = '1.9.1';
     $javascript['misc/jquery.js']['preprocess'] = FALSE;
     //$javascript['misc/ui/jquery.ui.core.min.js']['data'] = '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js';
-    $javascript['misc/ui/jquery.ui.core.min.js']['data'] = $base_url.'/sites/all/themes/royalcommission/js/jquery-ui.min.js';
+    $javascript['misc/ui/jquery.ui.core.min.js']['data'] = drupal_get_path('theme', 'royalcommission') . '/js/jquery-ui.min.js';
     $javascript['misc/ui/jquery.ui.core.min.js']['version'] = '1.10.2';
     $javascript['misc/ui/jquery.ui.core.min.js']['preprocess'] = FALSE;
     unset($javascript['misc/ui/jquery.ui.widget.min.js']);

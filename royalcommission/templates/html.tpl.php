@@ -55,7 +55,7 @@ global $base_url;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta property="og:title" content="<?php print $head_title; ?>"/>
   <?php print $head; ?>
-  <link type="text/css" rel="stylesheet" href="<?php print $base_url . '/sites/all/themes/royalcommission/css/bootstrap.min.css'; ?>">
+  <link rel="stylesheet" href="<?php echo drupal_get_path('theme', 'royalcommission'); ?>/css/bootstrap.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>

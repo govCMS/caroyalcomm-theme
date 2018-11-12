@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, Drupal) {
   // Global variables
   var scrollTimeout;
   var carouselAboutCommOpt;
@@ -642,47 +642,47 @@
 
     groupingCarouselControls: function (elCarousel) {
 
-      var prevButtonElmString = '<a href="#previous" data-role="none" class="slick-prev slick-arrow" aria-label="Slideshow Previous" role="button">' + 
-                                '<span class="active-control-default">' + 
-                                '<span class="sr-only">Slideshow Previous</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-prev-circle.png" alt="Previous" focusable="false">' + 
+      var prevButtonElmString = '<a href="#previous" data-role="none" class="slick-prev slick-arrow" aria-label="Slideshow Previous" role="button">' +
+                                '<span class="active-control-default">' +
+                                '<span class="sr-only">Slideshow Previous</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-prev-circle.png" alt="Previous" focusable="false">' +
                                 '</span>' +
-                                '<span class="active-control-hover hide">' + 
-                                '<span class="sr-only">Slideshow Previous</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-prev-circle-hover.png" alt="Previous" focusable="false">' +
-                                '</span>' +
-                                '</a>';
-      
-      var nextButtonElmString = '<a href="#next" data-role="none" class="slick-next slick-arrow" aria-label="Slideshow Next" role="button">' + 
-                                '<span class="active-control-default">' + 
-                                '<span class="sr-only">Slideshow Next</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-next-circle.png" alt="Next" focusable="false">' + 
-                                '</span>' +
-                                '<span class="active-control-hover hide">' + 
-                                '<span class="sr-only">Slideshow Next</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-next-circle-hover.png" alt="Next" focusable="false">' +
+                                '<span class="active-control-hover hide">' +
+                                '<span class="sr-only">Slideshow Previous</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-prev-circle-hover.png" alt="Previous" focusable="false">' +
                                 '</span>' +
                                 '</a>';
 
-      var playButtonElmString = '<a href="#play" data-role="none" class="slick-play slick-arrow" aria-label="Slideshow Play" role="button">' + 
-                                '<span class="active-control-default">' + 
-                                '<span class="sr-only">Slideshow Play</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-play-circle.png" alt="Play" focusable="false">' + 
+      var nextButtonElmString = '<a href="#next" data-role="none" class="slick-next slick-arrow" aria-label="Slideshow Next" role="button">' +
+                                '<span class="active-control-default">' +
+                                '<span class="sr-only">Slideshow Next</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-next-circle.png" alt="Next" focusable="false">' +
                                 '</span>' +
-                                '<span class="active-control-hover hide">' + 
-                                '<span class="sr-only">Slideshow Play</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-play-circle-hover.png" alt="Play" focusable="false">' +
+                                '<span class="active-control-hover hide">' +
+                                '<span class="sr-only">Slideshow Next</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-next-circle-hover.png" alt="Next" focusable="false">' +
                                 '</span>' +
                                 '</a>';
 
-      var pauseButtonElmString = '<a href="#play" data-role="none" class="slick-pause slick-arrow" aria-label="Slideshow Pause" role="button">' + 
-                                '<span class="active-control-default">' + 
-                                '<span class="sr-only">Slideshow Pause</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-pause-circle.png" alt="Pause" focusable="false">' + 
+      var playButtonElmString = '<a href="#play" data-role="none" class="slick-play slick-arrow" aria-label="Slideshow Play" role="button">' +
+                                '<span class="active-control-default">' +
+                                '<span class="sr-only">Slideshow Play</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-play-circle.png" alt="Play" focusable="false">' +
                                 '</span>' +
-                                '<span class="active-control-hover hide">' + 
-                                '<span class="sr-only">Slideshow Pause</span>' + 
-                                '<img src="/sites/all/themes/royalcommission/img/icon-pause-circle-hover.png" alt="Pause" focusable="false">' +
+                                '<span class="active-control-hover hide">' +
+                                '<span class="sr-only">Slideshow Play</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-play-circle-hover.png" alt="Play" focusable="false">' +
+                                '</span>' +
+                                '</a>';
+
+      var pauseButtonElmString = '<a href="#play" data-role="none" class="slick-pause slick-arrow" aria-label="Slideshow Pause" role="button">' +
+                                '<span class="active-control-default">' +
+                                '<span class="sr-only">Slideshow Pause</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-pause-circle.png" alt="Pause" focusable="false">' +
+                                '</span>' +
+                                '<span class="active-control-hover hide">' +
+                                '<span class="sr-only">Slideshow Pause</span>' +
+                                '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-pause-circle-hover.png" alt="Pause" focusable="false">' +
                                 '</span>' +
                                 '</a>';
 
@@ -918,7 +918,7 @@
           '<img src="'+item.find('.media-item-thumbnail img').data('poster')+'" class="img-responsive">'+
           '<a href="#" class="video-btn play-detail-video">'+
             '<span class="sr-only">Play Video</span>'+
-            '<img src="/sites/all/themes/royalcommission/img/icon-play.png" alt="Play Video" aria-hidden="true" focusable="false">'+
+            '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-play.png" alt="Play Video" aria-hidden="true" focusable="false">'+
           '</a>'+
           '<video width="640" height="360" controls preload="none" class="detail-gallery-video">'+
             '<source src="'+item.find('.media-item-thumbnail img').data('url')+'" type="video/mp4">'+
@@ -932,7 +932,7 @@
           '<img src="'+item.find('.media-item-thumbnail img').data('poster')+'" class="img-responsive">'+
           '<a href="#" class="video-btn play-detail-video">'+
             '<span class="sr-only">Play Video</span>'+
-            '<img src="/sites/all/themes/royalcommission/img/icon-play.png" alt="Play Video" aria-hidden="true" focusable="false">'+
+            '<img src="' + Drupal.settings.basePath + Drupal.settings.pathToTheme + '/img/icon-play.png" alt="Play Video" aria-hidden="true" focusable="false">'+
           '</a>'+
           '<div class="px-video-container" id="myvid">' +
             '<div class="px-video-img-captions-container">' +
@@ -2559,4 +2559,4 @@
   function add_placeholder_text_on_mediarelease_field(){
     $('.view-rc-media-releases #edit-keys-wrapper [name=keys]').attr('placeholder','Search by keyword');
   }
-}(jQuery));
+}(jQuery, Drupal));
