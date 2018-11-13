@@ -55,7 +55,7 @@ global $base_url;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta property="og:title" content="<?php print $head_title; ?>"/>
   <?php print $head; ?>
-  <link rel="stylesheet" href="<?php echo drupal_get_path('theme', 'royalcommission'); ?>/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/<?php echo drupal_get_path('theme', 'royalcommission'); ?>/css/bootstrap.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
@@ -68,14 +68,14 @@ global $base_url;
   <div id="is_mobile"></div>
 </div>
 
-  
+
 <!-- Modal/Lightbox Royal Commission -->
 <div class="modal fade" id="modalRC" tabindex="-1" role="dialog">
   <div class="vertical-alignment-helper">
     <div class="modal-dialog vertical-align-center" role="document">
       <div class="modal-content">
         <div class="close-btn-wrapper">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true"></span></button>  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true"></span></button>
         </div>
         <div class="modal-body"></div>
       </div><!-- /.modal-content -->
@@ -87,7 +87,7 @@ global $base_url;
 <p class="sr-only">
   <span class="sr-only content-live-region" aria-live="assertive">
     <span class="content-update hide">Content updating</span>
-    <span class="content-complete">Updating complete</span>   
+    <span class="content-complete">Updating complete</span>
   </span>
 </p>
 
